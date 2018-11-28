@@ -1,5 +1,5 @@
 package v1beta1
-
+/*
 import (
 	"k8s.io/apimachinery/pkg/apimachinery/announced"
 	"k8s.io/apimachinery/pkg/apimachinery/registered"
@@ -20,3 +20,5 @@ func Install(groupFactoryRegister announced.APIGroupFactoryRegistry, registry *r
 		},
 	).Announce(groupFactoryRegister).RegisterAndEnable(registry, scheme)
 }
+
+*/
