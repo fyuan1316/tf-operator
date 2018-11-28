@@ -30,7 +30,7 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJob": {
+		"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJob": {
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "TFJob represents the configuration of signal TFJob",
@@ -58,22 +58,22 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 						"spec": {
 							SchemaProps: spec.SchemaProps{
 								Description: "Specification of the desired behavior of the TFJob.",
-								Ref:         ref("github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobSpec"),
+								Ref:         ref("github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobSpec"),
 							},
 						},
 						"status": {
 							SchemaProps: spec.SchemaProps{
 								Description: "Most recently observed status of the TFJob. This data may not be up to date. Populated by the system. Read-only.",
-								Ref:         ref("github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobStatus"),
+								Ref:         ref("github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobStatus"),
 							},
 						},
 					},
 				},
 			},
 			Dependencies: []string{
-				"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobSpec", "github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+				"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobSpec", "github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 		},
-		"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobCondition": {
+		"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobCondition": {
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "TFJobCondition describes the state of the TFJob at a certain point.",
@@ -125,7 +125,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 			Dependencies: []string{
 				"k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
 		},
-		"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobList": {
+		"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobList": {
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "TFJobList is a list of TFJobs.",
@@ -157,7 +157,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 								Items: &spec.SchemaOrArray{
 									Schema: &spec.Schema{
 										SchemaProps: spec.SchemaProps{
-											Ref: ref("github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJob"),
+											Ref: ref("github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJob"),
 										},
 									},
 								},
@@ -168,9 +168,9 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 				},
 			},
 			Dependencies: []string{
-				"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJob", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+				"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJob", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 		},
-		"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobSpec": {
+		"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobSpec": {
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "TFJobSpec is a desired state description of the TFJob.",
@@ -196,7 +196,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 								AdditionalProperties: &spec.SchemaOrBool{
 									Schema: &spec.Schema{
 										SchemaProps: spec.SchemaProps{
-											Ref: ref("github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaSpec"),
+											Ref: ref("github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaSpec"),
 										},
 									},
 								},
@@ -207,9 +207,9 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 				},
 			},
 			Dependencies: []string{
-				"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaSpec"},
+				"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaSpec"},
 		},
-		"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobStatus": {
+		"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobStatus": {
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "TFJobStatus represents the current observed state of the TFJob.",
@@ -221,7 +221,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 								Items: &spec.SchemaOrArray{
 									Schema: &spec.Schema{
 										SchemaProps: spec.SchemaProps{
-											Ref: ref("github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobCondition"),
+											Ref: ref("github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobCondition"),
 										},
 									},
 								},
@@ -234,7 +234,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 								AdditionalProperties: &spec.SchemaOrBool{
 									Schema: &spec.Schema{
 										SchemaProps: spec.SchemaProps{
-											Ref: ref("github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaStatus"),
+											Ref: ref("github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaStatus"),
 										},
 									},
 								},
@@ -263,9 +263,9 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 				},
 			},
 			Dependencies: []string{
-				"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobCondition", "github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
+				"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFJobCondition", "github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
 		},
-		"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaSpec": {
+		"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaSpec": {
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "TFReplicaSpec is a description of the TFReplica",
@@ -296,7 +296,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 			Dependencies: []string{
 				"k8s.io/api/core/v1.PodTemplateSpec"},
 		},
-		"github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaStatus": {
+		"github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2.TFReplicaStatus": {
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "TFReplicaStatus represents the current observed state of the TFReplica.",

@@ -17,9 +17,9 @@ package validation
 import (
 	"testing"
 
-        common "github.com/kubeflow/tf-operator/pkg/apis/common/v1beta1"
-	tfv2 "github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1alpha2"
-	tfv1beta1 "github.com/kubeflow/tf-operator/pkg/apis/tensorflow/v1beta1"
+        common "github.com/fyuan1316/tf-operator/pkg/apis/common/v1beta1"
+	tfv2 "github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1alpha2"
+	tfv1beta1 "github.com/fyuan1316/tf-operator/pkg/apis/tensorflow/v1beta1"
 
 	"k8s.io/api/core/v1"
 )
